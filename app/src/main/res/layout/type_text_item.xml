@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="205dp"
+        android:layout_height="62dp"
+        android:textSize="24sp"
+        tools:text="Texto de prueba" />
+
+</LinearLayout>
