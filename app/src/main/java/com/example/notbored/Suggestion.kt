@@ -1,7 +1,9 @@
 package com.example.notbored
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import com.example.notbored.databinding.ActivitySuggestionBinding
 import com.example.notbored.retroFit.APIService
@@ -19,6 +21,11 @@ class Suggestion : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySuggestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val buttonTryAnother = findViewById<Button>(R.id.tryAnotherButton)
+        buttonTryAnother.setOnClickListener {
+            val tryAnother = Intent(this, MainActivity::class.java)
+            startActivity(tryAnother)
+        }
         searchByRandom()
     }
 

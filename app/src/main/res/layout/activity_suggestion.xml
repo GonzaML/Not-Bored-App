@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
         android:text="@string/title_try_another_button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="430dp"
         android:text="description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/tryAnotherButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -37,6 +39,7 @@
         android:layout_marginStart="88dp"
         android:layout_marginTop="324dp"
         android:text="@string/title_participants"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toStartOf="@+id/participantsNumberText"
         app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,17 +52,19 @@
         android:layout_marginTop="324dp"
         android:layout_marginEnd="44dp"
         android:text="number"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/priceText"
-        android:drawableStart="@android:drawable/ic_input_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
         android:layout_marginTop="69dp"
+        android:drawableStart="@android:drawable/ic_input_add"
         android:text="@string/title_price"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/priceRangeText"
         app:layout_constraintHorizontal_bias="0.0"
@@ -74,10 +79,11 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="44dp"
         android:text="range"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/participantsNumberText"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.112" />
 
     <TextView
         android:id="@+id/activityTypeText"
@@ -85,6 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:text="tipo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
