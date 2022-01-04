@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         val buttonStart = findViewById<Button>(R.id.startButton)
             buttonStart.setOnClickListener {
-                val startIntent = Intent(this, Suggestion::class.java)
+                val startIntent = Intent(this, Activities::class.java)
                 startActivity(startIntent)
             }
 
