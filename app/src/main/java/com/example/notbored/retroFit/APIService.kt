@@ -1,4 +1,4 @@
-package com.example.notbored
+package com.example.notbored.retroFit
 
 import retrofit2.Response
 import retrofit2.http.GET

@@ -2,10 +2,9 @@ package com.example.notbored
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
-import com.example.notbored.databinding.ActivityMainBinding
 import com.example.notbored.databinding.ActivitySuggestionBinding
+import com.example.notbored.retroFit.APIService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

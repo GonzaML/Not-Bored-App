@@ -1,4 +1,4 @@
-package com.example.notbored
+package com.example.notbored.retroFit
 
 import com.google.gson.annotations.SerializedName
 

@@ -4,9 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notbored.RecyclerView.ActivitiesViewHolder
-import com.example.notbored.retroFit.ActivityResponse
 
-class ActivityAdapter(private val typeList : List<ActivityResponse>) : RecyclerView.Adapter<ActivitiesViewHolder>() {
+class ActivityAdapter(private val typeList: List<Type>) : RecyclerView.Adapter<ActivitiesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActivitiesViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
