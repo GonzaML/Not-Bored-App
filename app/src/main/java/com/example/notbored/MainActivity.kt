@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.notbored.databinding.ActivityActivitiesBinding
 import retrofit2.Retrofit
@@ -24,52 +25,28 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        //binding = ActivityMainBinding.inflate(layoutInflater)
+        //setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
-        binding.termsAndConditions.setOnClickListener{
+        /*binding.termsAndConditions.setOnClickListener{
             setContentView(R.layout.activity_terms_and_conditions)
         }
 
         binding.startButton.setOnClickListener{
-            setContentView(R.layout.activity_activities)
+            setContentView(R.layout.activity_suggestion)
+        } */
+
+        val buttonTermsAndConditions = findViewById<Button>(R.id.termsAndConditions)
+        buttonTermsAndConditions.setOnClickListener {
+            val termsAndConditionsIntent = Intent(this, Suggestion::class.java)
+            startActivity(termsAndConditionsIntent)
         }
 
-    }
-
-
-
-    private fun searchActivityByType(query: String) {
-
-        //Buscar eso en la API
-
-        CoroutineScope(Dispatchers.IO).launch {
-
-            val call = getRetrofit()
-                .create(APIServiceActivity::class.java)
-                .getActivityByType("?type=$query")
-                if(call.isSuccessful) {
-                    //show recycler view
-                } else {
-                    //show error
-                }
-
-            //Cargar la respuesta en el Recycler View
-
-            val activityResponse : ActivityResponse? = call.body()
-
-
-            }
-
+        val buttonStart = findViewById<Button>(R.id.startButton)
+        buttonStart.setOnClickListener {
+            val startIntent = Intent(this, Activities::class.java)
+            startActivity(startIntent)
         }
-
     }
-
-    private fun getRetrofit(): Retrofit {
-
-        return Retrofit.Builder()
-            .baseUrl("http://www.boredapi.com/api/activity")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-    }
+}

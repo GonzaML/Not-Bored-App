@@ -2,10 +2,11 @@ package com.example.notbored
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.notbored.databinding.ActivityActivitiesBinding
 import com.example.notbored.databinding.ActivityMainBinding
 
 class Activities : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityActivitiesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
